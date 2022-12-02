@@ -1,0 +1,40 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+
+class Trader extends Widget  {
+ final dynamic Name;
+final dynamic Available;
+
+  Trader({this.Name, this.Available}) {}
+  
+  @override
+  Element createElement() {
+    // TODO: implement createElement
+    throw UnimplementedError();
+  }
+}
+
+class Product extends Widget {
+ final dynamic Price;
+ final dynamic Name;
+  final dynamic Available;
+  Product({this.Price, this.Available, this.Name}) {}
+  
+  @override
+  Element createElement() {
+    // TODO: implement createElement
+    throw UnimplementedError();
+  }
+}
+ class Localities extends Trader implements Widget {
+   final dynamic Area;
+  final dynamic Trader;
+
+Localities({this.Area,this.Trader}){}
+
+  @override
+  Element createElement() {
+    // TODO: implement createElement
+    throw UnimplementedError();
+  }
+}
