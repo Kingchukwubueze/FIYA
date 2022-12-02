@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'customClasses.dart';
+
+main() => runApp(MaterialApp(home: Traders(),));
+
+
+class Traders extends StatefulWidget {
+  const Traders({super.key});
+
+  @override
+  State<Traders> createState() => _TradersState();
+}
+
+class _TradersState extends State<Traders> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(backgroundColor: Colors.lightGreenAccent,centerTitle: true,title: Trader(Name: 'mama bisi',Available: 'Yes',),),
+    body: Center(child: Row(  children: [Product(Name: 'Yam',Price: '800-1500',Available: 'Yes',)],),),);
+  }
+}
