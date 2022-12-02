@@ -17,6 +17,12 @@ class _LocalityState extends State<Locality> {
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar(backgroundColor: Colors.limeAccent,title:Text('Localities'),centerTitle: true ,),body: Center(child: 
     Row(children: [Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
-    Trader(Name: "mama Bisi",Available: 'Yes'),),)],),),);
+    Trader(Name: "mama Bisi",Available: 'Yes'),),),Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "Mercy",Available: 'Yes'),),),Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "pipipi",Available: 'No'),),),Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "mama agogo",Available: 'Yes'),),),Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "Osiki",Available: 'No'),),),Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "Mummy nurse",Available: 'Yes'),),)],),),);
   }
 }
+
