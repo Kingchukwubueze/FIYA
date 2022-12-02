@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'customClasses.dart';
+
+
+main() => runApp(MaterialApp(home: Locality() ,));
+
+
+class Locality extends StatefulWidget {
+  const Locality({super.key});
+
+  @override
+  State<Locality> createState() => _LocalityState();
+}
+
+class _LocalityState extends State<Locality> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(backgroundColor: Colors.limeAccent,title:Text('Localities'),centerTitle: true ,),body: Center(child: 
+    Row(children: [Card(margin: EdgeInsets.all(20),child: Localities(Area: "Odibo",Trader: 
+    Trader(Name: "mama Bisi",Available: 'Yes'),),)],),),);
+  }
+}
