@@ -1,10 +1,17 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'customClasses.dart';
 import 'locality.dart';
+import 'TradersPage.dart';
 
-
-
-main() => runApp(MaterialApp(home: homeScreen(),));
+main() => runApp(MaterialApp(
+      home: homeScreen(),
+      routes: {
+        '/': (context) => Locality(),
+        '/TradersPage': (context) => Traders()
+      },
+    ));
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});
@@ -16,8 +23,16 @@ class homeScreen extends StatefulWidget {
 class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Image(image: AssetImage('assets/logo.jpg')),), floatingActionButton: FloatingActionButton(onPressed: () {
-      
-    }, child: Icon(Icons.navigate_next),),);
+    return Scaffold(
+      body: Center(
+        child: Image(image: AssetImage('assets/logo.jpg')),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/');
+        },
+        child: Icon(Icons.navigate_next),
+      ),
+    );
   }
 }
