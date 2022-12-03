@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'customClasses.dart';
+
+main() => runApp(MaterialApp(home: Products(),));
+
+class Products extends StatefulWidget {
+  const Products({super.key});
+
+  @override
+  State<Products> createState() => _ProductsState();
+}
+
+class _ProductsState extends State<Products> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(title:Text('Products'),backgroundColor: Colors.limeAccent,centerTitle:true,elevation: 0,),
+    body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: 
+    [Container(child: Product(Name: 'Chit-lish Bread',Available:'yes',Price: 'N900',),),
+    Container(child: Product(Name: 'Naomi Bread',Available:'yes',Price: 'N950',),),
+    Container(child: Product(Name: 'Indomie',Available:'yes',Price: 'N300',),),
+    Container(child: Product(Name: 'Rice',Available:'yes',Price: 'N200',),),
+    Container(child: Product(Name: 'beans',Available:'yes',Price: '150',),)],),),
+    floatingActionButton: FloatingActionButton(onPressed: () {},child: Text('Order'),),);
+  }
+
+}
