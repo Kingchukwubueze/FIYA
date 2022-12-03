@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+
+
+
+main() => runApp(MaterialApp(home: UserPage(),));
+
+class UserPage extends StatefulWidget {
+  const UserPage({super.key});
+
+  @override
+  State<UserPage> createState() => _UserPageState();
+}
+
+class _UserPageState extends State<UserPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(title: Text('Profile'),centerTitle: true,backgroundColor: Colors.limeAccent,),body: Center(child: Column(children: 
+    [CircleAvatar(backgroundImage: AssetImage('assets/logo.jpg'),radius:50.0),Divider(height: 10.0,),
+    Container(child: Text("Name:"),),SizedBox(height: 10.0,),Container(child: Text("Chukwubueze"),),Divider(height: 20.0,),Container(child: Text("Email:"),),SizedBox(height: 10.0),Container(child: Text("Okeleke@yahoo.com"),),Divider(height: 10.0,),Container(child: Text("Balance:")),SizedBox(height: 10.0,),Container(child: Text("N8500"))],),),floatingActionButton: FloatingActionButton(onPressed: () {
+      
+    },child: Icon(Icons.chat),),);
+  }
+}
